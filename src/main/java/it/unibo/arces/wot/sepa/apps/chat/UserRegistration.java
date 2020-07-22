@@ -9,6 +9,7 @@ import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPASecurityException;
 import it.unibo.arces.wot.sepa.commons.sparql.RDFTermLiteral;
+import it.unibo.arces.wot.sepa.commons.sparql.RDFTermURI;
 import it.unibo.arces.wot.sepa.pattern.Producer;
 
 public class UserRegistration extends Producer {
@@ -29,5 +30,18 @@ public class UserRegistration extends Producer {
 			logger.error(e.getMessage());
 		}
 	}
-
+	
+	//se si vuole specificare la stanza
+	public void register(String userName, String room) {
+		logger.debug("Register: "+userName);
+		
+		try {
+			this.setUpdateBindingValue("userName", new RDFTermLiteral(userName));
+			this.setUpdateBindingValue("room", new RDFTermURI(room));
+			
+			update();
+		} catch (SEPASecurityException | SEPAProtocolException | SEPAPropertiesException | SEPABindingsException e) {
+			logger.error(e.getMessage());
+		}
+	}
 }

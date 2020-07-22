@@ -39,7 +39,7 @@ class Receiver extends ChatAggregator {
 			logger.debug("SENT " + bindings.getValue("message"));
 			
 			handler.onMessageReceived(userUri, bindings.getValue("message"), bindings.getValue("name"), bindings.getValue("text"),bindings.getValue("time"));
-			
+		
 			try {
 				this.setUpdateBindingValue("message", new RDFTermURI(bindings.getValue("message")));
 				update();

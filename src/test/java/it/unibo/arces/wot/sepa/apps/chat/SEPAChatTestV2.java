@@ -17,13 +17,13 @@ import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPASecurityException;
 
-public class SEPAChatTest {
-	//test originale, prima dell'aggiunta delle room
+public class SEPAChatTestV2 {
 	private static final Logger logger = LogManager.getLogger();
 	
-	private static int N_CLIENTS = 5;
+
+	private static int N_CLIENTS = 10;
 	private static int BASE = 0;
-	private static int MESSAGES = 5;
+	private static int MESSAGES = 10;
 
 	private static Users users;
 	private static List<ChatClient> clients = new ArrayList<ChatClient>();
@@ -49,7 +49,9 @@ public class SEPAChatTest {
 	@Test // (timeout = 5000)
 	public void basicChatTest() throws SEPAProtocolException, SEPAPropertiesException, SEPASecurityException,
 			InterruptedException, IOException, SEPABindingsException {
-
+		/*
+		 * Ogni coppia di clienti ha una stanza in cui si scambiano dei messaggi 
+		 */
 		users.joinChat();
 		
 		monitor = new ChatMonitor(users.getUsers(), MESSAGES);
@@ -81,9 +83,12 @@ public class SEPAChatTest {
 	private static void registerClients() throws SEPAProtocolException, SEPAPropertiesException, SEPASecurityException {
 		// Register chat BOTS
 		UserRegistration registration = new UserRegistration();
-		for (int i = BASE; i < BASE + N_CLIENTS; i++) {
+		int room = 0;
+		for (int i = BASE; i < BASE + N_CLIENTS -1; i++) {
 			logger.info("Register client: "+"ChatBot" + i);
-			registration.register("ChatBot" + i);
+			registration.register("ChatBot" + i,"Room"+room);
+			registration.register("ChatBot" + i+1,"Room"+room);
+			room++;
 		}
 		try {
 			registration.close();

@@ -1,0 +1,81 @@
+-------------------------------------------------------
+---
+---------------chat.jsap
+---
+-------------------------------------------------------
+
+File conf originale, permette comunicazioni 1-1 tra clienti, tutti i clienti fanno parte dello stesso grafo
+
+
+-------------------------------------------------------
+---
+---------------chatV2.jsap
+---
+-------------------------------------------------------
+*)modifiche importanti:
+    1)REGISTER_USER
+        modificato per avere un grafo per ogni utente (room)
+        si può confinare un utente o più in una stanza
+    2)DELETE_ROOM
+        aggiunta per poter eliminare una stanza
+
+*)invariate:
+    STORE_SENT
+    STORE_RECEIVED    
+    (si potrebbe aggiungere una tripla che segni la room coinvolta, in queste sopra)
+    USERS
+    RECEIVED_MONITOR
+    (forse vanno modificate anche queste sopra)
+    LOG_SENT
+    LOG_RECEIVED
+    QUERY_ALL
+*)modifiche di conseguenza alla importanti
+    aggunta la force bind per la stanza (?room) su tutte le rimanenti
+
+
+---------------------------
+##----------------SEND ORIGINALE
+
+WITH <http://wot.arces.unibo.it/chat/> INSERT {
+		?message rdf:type schema:Message; 
+		schema:text ?text;
+		schema:sender ?sender;
+		schema:toRecipient ?receiver;
+		schema:dateSent ?time
+	} WHERE {
+		BIND(IRI(CONCAT(\"http://wot.arces.unibo.it/chat/message_\",STRUUID())) AS ?message) .
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person .
+		BIND(STR(now()) AS ?time)
+	}
+
+#---------------------SEND CON ROOM (semplificata)
+WITH <http://wot.arces.unibo.it/chat/room45/> INSERT {
+<http://wot.arces.unibo.it/chat/room45/message/prova> rdf:type schema:Message ;
+ schema:text ?text ;
+ schema:sender ?sender ;
+ schema:toRecipient ?receiver;
+ schema:dateSent ?time
+} WHERE    {
+ BIND(STR(now()) AS ?time) .
+	GRAPH <http://wot.arces.unibo.it/chat> {
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person 
+	}
+}
+
+#---------------------SEND CON ROOM (jsap con force-bind)
+WITH ?room INSERT {
+ ?message rdf:type schema:Message ;
+ schema:text ?text ;
+ schema:sender ?sender ;
+ schema:toRecipient ?receiver;
+ schema:dateSent ?time
+} WHERE    {
+ BIND(IRI(CONCAT(CONCAT(?room ,\"/message_\"),STRUUID())) AS ?message) .
+ BIND(STR(now()) AS ?time) .
+	GRAPH <http://wot.arces.unibo.it/chat> {
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person 
+	}
+}
