@@ -49,10 +49,7 @@ public class ChatMonitor {
 		new Thread() {
 			public void run() {			
 				while(true) {
-					logger.info("****************************");
-					for (UserMonitor mon : messageMap.values()) {
-						logger.info(mon);
-					}
+					printStatus();
 					try {
 						Thread.sleep(5000);
 					} catch (InterruptedException e) {
@@ -63,6 +60,12 @@ public class ChatMonitor {
 		}.start();
 	}
 
+	public void printStatus() {
+		logger.info("****************************");
+		for (UserMonitor mon : messageMap.values()) {
+			logger.info(mon);
+		}
+	}
 	public synchronized void monitor() throws InterruptedException {
 		boolean allDone;
 		do {
@@ -75,6 +78,12 @@ public class ChatMonitor {
 				}
 			}
 		} while(!allDone);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			return;
+		}
+		printStatus();
 	}
 
 	public synchronized void brokenConnectionReceiver(String user) {

@@ -86,8 +86,8 @@ public class SEPAChatTestV2 {
 		int room = 0;
 		for (int i = BASE; i < BASE + N_CLIENTS -1; i++) {
 			logger.info("Register client: "+"ChatBot" + i);
-			registration.register("ChatBot" + i,"Room"+room);
-			registration.register("ChatBot" + i+1,"Room"+room);
+			//registration.register("ChatBot" + i,"Room"+room);
+			//registration.register("ChatBot" + i+1,"Room"+room);
 			room++;
 		}
 		try {

@@ -100,3 +100,12 @@ il primo che riceve esegue la set_received, tutti incrementano un contatore "sch
 La remove non è ottimizzata, viene lanciata sempre per mantenere la retrocompatibilità con la chat originale,
 ma è utile solo quando il count delle SET_RECEIVED è pare ai partecipanti della room
 (tranne il caso a default in cui esiste uan sola room e i messaggi sono 1-1)
+
+-------------------------------------------------------
+---
+---------------chat_room_v4.jsap (test pass)
+---
+-------------------------------------------------------
+qualche fix sparql ed aggiunto il contatore nel numero di clienti in una roomin modo da capire quando eliminare un messaggio,
+il messaggio viene eliminato solo dopo la lettura numero N dove N sono gli utenti che si sono "segnato" come partecipanti alla room
+(manca però la gestione del caso in cui un messaggio abbia un destinatario, dunque deve essere eliminato dopo la prima lettura)

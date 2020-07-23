@@ -31,17 +31,5 @@ public class UserRegistration extends Producer {
 		}
 	}
 	
-	//se si vuole specificare la stanza
-	public void register(String userName, String room) {
-		logger.debug("Register: "+userName);
-		
-		try {
-			this.setUpdateBindingValue("userName", new RDFTermLiteral(userName));
-			this.setUpdateBindingValue("room", new RDFTermURI(room));
-			
-			update();
-		} catch (SEPASecurityException | SEPAProtocolException | SEPAPropertiesException | SEPABindingsException e) {
-			logger.error(e.getMessage());
-		}
-	}
+	
 }
