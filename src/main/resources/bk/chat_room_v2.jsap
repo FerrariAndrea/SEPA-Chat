@@ -83,21 +83,7 @@
 			}
 		},
 		"SET_RECEIVED": {
-			"sparql": "
-					WITH ?room DELETE {
-							?message schema:dateReceived ?time .
-							?message chat:atualReceivedCount ?count .
-					}
-					INSERT {
-							?message schema:dateReceived ?time .
-							?message chat:atualReceivedCount ?countupdated.
-					} WHERE {	
-						OPTIONAL{?message chat:atualReceivedCount ?count.}
-						?message rdf:type schema:Message .	
-						BIND(STR(now()) AS ?time) .
-						BIND ((IF(BOUND(?count), ?count + 1, 1)) AS ?countupdated) .
-					}
-				",
+			"sparql": "WITH ?room INSERT {?message schema:dateReceived ?time} WHERE {?message rdf:type schema:Message . BIND(STR(now()) AS ?time)}",
 			"forcedBindings": {
 				"message": {
 					"type": "uri",
@@ -110,17 +96,7 @@
 			}
 		},
 		"REMOVE": {
-			"sparql": "
-			WITH ?room DELETE 
-				{?message ?p ?o} 
-			WHERE {
-					?message rdf:type schema:Message ; ?p ?o.
-				 	OPTIONAL{?message chat:atualReceivedCount ?count.}
-					BIND ((IF(BOUND(?count), ?count, 1)) AS ?countbinded).
-					FILTER (?countbinded >= ?participants)
-			}
-			
-			",
+			"sparql": "WITH ?room DELETE {?message ?p ?o} WHERE {?message rdf:type schema:Message ; ?p ?o}",
 			"forcedBindings": {
 				"message": {
 					"type": "uri",
@@ -129,11 +105,6 @@
 				"room": {					
 					"type": "uri",
 					"value": "http://wot.arces.unibo.it/chat/room_default"
-				},
-				"participants":{
-					"type": "literal",
-					"value": "1",					
-					"datatype": "xsd:decimal"
 				}
 			}
 		},
@@ -199,8 +170,8 @@
 				WHERE {
 					?message rdf:type schema:Message ;
 					schema:text ?text ;
-					schema:sender ?sender ;					
-					schema:toRecipient ?receiver;
+					schema:sender ?sender ;
+					schema:toRecipient ?receiver ;
 					schema:dateSent ?time .
 
 					GRAPH <http://wot.arces.unibo.it/chat/> {

@@ -6,10 +6,9 @@
 
 File conf originale, permette comunicazioni 1-1 tra clienti, tutti i clienti fanno parte dello stesso grafo
 
-
 -------------------------------------------------------
 ---
----------------chatV2.jsap
+---------------chat_room_v1.jsap  (test not pass)
 ---
 -------------------------------------------------------
 *)modifiche importanti:
@@ -31,6 +30,14 @@ File conf originale, permette comunicazioni 1-1 tra clienti, tutti i clienti fan
     QUERY_ALL
 *)modifiche di conseguenza alla importanti
     aggunta la force bind per la stanza (?room) su tutte le rimanenti
+
+-------------------------------------------------------
+---
+---------------chat_room_v2.jsap (test pass)
+---
+-------------------------------------------------------
+
+vari fix e conclusione confinamento messaggi in room
 
 
 ---------------------------
@@ -79,3 +86,17 @@ WITH ?room INSERT {
 		?receiver rdf:type schema:Person 
 	}
 }
+
+
+-------------------------------------------------------
+---
+---------------chat_room_v3.jsap (test pass)
+---
+-------------------------------------------------------
+il receiver non è più obbligatorio, se omesso il messaggi oè "di gruppo" tutti devono leggerlo nella stanza
+(sto cercando di tenere retrocompatibilità con il codice originale)
+COsa fare con la received in caso di receiver omesso?
+il primo che riceve esegue la set_received, tutti incrementano un contatore "schema:InteractionCounter count".
+La remove non è ottimizzata, viene lanciata sempre per mantenere la retrocompatibilità con la chat originale,
+ma è utile solo quando il count delle SET_RECEIVED è pare ai partecipanti della room
+(tranne il caso a default in cui esiste uan sola room e i messaggi sono 1-1)
