@@ -3666,3 +3666,31 @@
 
 2020-07-24T11:14:44,772|[ERROR]|Grizzly(2)|(Consumer.java:188)|Subscribed: false Token expired: false SM: false
 
+2020-07-24T17:57:56,120|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,142|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,145|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,148|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,151|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,154|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,156|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,159|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,162|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,165|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,168|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,171|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,174|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+
+2020-07-24T17:57:56,177|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <INSERT_DATA> \"INSERT DATA \"\" at line 3, column 41.\r\nWas expecting one of:\r\n    \"insert\" ...\r\n    \"delete\" ...\r\n    "}
+

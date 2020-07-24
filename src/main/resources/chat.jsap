@@ -35,7 +35,8 @@
 		"type": "basic",
 		"base": 0,
 		"clients": 5,
-		"messages": 5
+		"messages": 5,
+		"free_rooms" : 2
 	},
 	"graphs": {
 
@@ -142,10 +143,11 @@
 		},
 		"CREATE_ROOM":{
 			"sparql": "
-					WITH  ?room
 					INSERT DATA {
-						<http://wot.arces.unibo.it/chat/partecipants>  rdf:type chat:actualSize;
-						 rdf:value 0.
+						GRAPH ?room {
+							<http://wot.arces.unibo.it/chat/partecipants>  rdf:type chat:actualSize;
+							rdf:value 0.
+						}
 					}
 			",
 			"forcedBindings": {
