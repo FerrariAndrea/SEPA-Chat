@@ -53,7 +53,8 @@
 						schema:text ?text ;
 						schema:sender ?sender ;
 						schema:toRecipient ?receiver;
-						schema:dateSent ?time
+						schema:dateSent ?time ;
+						chat:private ?private.
 					} WHERE    {
 						BIND(IRI(CONCAT(CONCAT(?room ,\"/message_\"),STRUUID())) AS ?message) .
 						BIND(STR(now()) AS ?time) .
@@ -79,6 +80,10 @@
 				"room": {					
 					"type": "uri",
 					"value": "http://wot.arces.unibo.it/chat/room_default"
+				},
+				"private": {
+					"type": "literal",
+					"value": 1
 				}
 			}
 		},
@@ -114,12 +119,14 @@
 			WITH ?room DELETE 
 				{?message ?p ?o} 
 			WHERE {
-					?message rdf:type schema:Message ; ?p ?o.					
+					?message rdf:type schema:Message ;
+					chat:private ?private;
+					?p ?o.					
 					OPTIONAL{<http://wot.arces.unibo.it/chat/partecipants> rdf:value ?participants .}			
 				 	OPTIONAL{?message chat:atualReceivedCount ?count.}
 					BIND ((IF(BOUND(?count), ?count, 1)) AS ?countBinded).						
 					BIND ((IF(BOUND(?participants), ?participants, 1)) AS ?participantsBinded).			
-					FILTER (?countBinded >= ?participantsBinded).
+					FILTER (?countBinded >= ?participantsBinded || ?private = \"1\")
 			}			
 			",
 			"forcedBindings": {
@@ -237,21 +244,31 @@
 				SELECT ?message ?sender ?name ?text ?time 
 				FROM ?room 
 				FROM NAMED <http://wot.arces.unibo.it/chat/>
-				WHERE {
-					?message rdf:type schema:Message ;
-					schema:text ?text ;
-					schema:sender ?sender ;					
-					schema:toRecipient ?receiver;
-					schema:dateSent ?time .
-
-					GRAPH <http://wot.arces.unibo.it/chat/> {
-						?sender rdf:type schema:Person ;
-						schema:name ?name .
-						?receiver rdf:type schema:Person
+				WHERE { {
+						?message rdf:type schema:Message ;
+						schema:text ?text ;
+						schema:sender ?sender ;			
+						schema:dateSent ?time ;
+						chat:private \"1\";
+						schema:toRecipient ?receiver .
+						GRAPH <http://wot.arces.unibo.it/chat/> {
+										?sender rdf:type schema:Person ;
+										schema:name ?name .
+										?receiver rdf:type schema:Person.
+						}	
 					}
-
-
-					} ORDER BY ?time
+					UNION 
+					{
+						?message rdf:type schema:Message ;
+						schema:text ?text ;
+						schema:sender ?sender ;			
+						schema:dateSent ?time ;
+						chat:private \"0\" .
+						GRAPH <http://wot.arces.unibo.it/chat/> {
+										?sender rdf:type schema:Person ;
+										schema:name ?name .
+						}	
+					} } ORDER BY ?time
 			",
 			"forcedBindings": {
 				"receiver": {
@@ -270,7 +287,7 @@
 						?message schema:sender ?sender ;
 						schema:toRecipient ?receiver ;
 						schema:dateReceived ?time ;
-						rdf:type schema:Message
+						rdf:type schema:Message .
 					}",
 			"forcedBindings": {
 				"sender": {
