@@ -1,4 +1,4 @@
-package it.unibo.arces.wot.sepa.apps.chat.client;
+package it.unibo.arces.wot.sepa.apps.chat.roomVersion.client;
 
 import java.io.IOException;
 
@@ -12,21 +12,22 @@ import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPASecurityException;
+/*
+public class RoomClient extends RoomChatClient {
 
-public class BasicClient extends ChatClient {
 	private static final Logger logger = LogManager.getLogger();
 
 	protected String user;
-	protected Users users;
-	protected int messages = 10;
-	protected ChatMonitor monitor;
+	private RoomComunicationType rct;
+	private int messages = 10;
+	private ChatMonitor monitor;
 	
-	public BasicClient(String userURI, Users users,int messages,ChatMonitor monitor)
+	public RoomClient(String userURI, RoomComunicationType rct,int messages,ChatMonitor monitor)
 			throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException, SEPABindingsException, IOException, InterruptedException {
-		super(userURI);
+		super(userURI,rct.getRoomUri(),messages,monitor);
 
 		this.user = userURI;
-		this.users = users;
+		this.rct = rct;
 		this.messages = messages;
 		this.monitor = monitor;
 	}
@@ -35,14 +36,16 @@ public class BasicClient extends ChatClient {
 	public void run() {
 		int n = 0;
 		
-		for (int i = 0; i < messages; i++) {
-			for (String receiver : users.getUsers()) {
-				if (receiver.equals(user) && users.getUsers().size() > 1)
-					continue;
-				n++;
-				logger.debug(users.getUserName(user) + " SEND MESSAGE (" + n + "/" + messages *  (users.getUsers().size()-1) +")");
-				sendMessage(receiver, "MSG #" + n);
+		for (int i = 0; i < messages; i++) {	
+			try {
+				sendMessage(this.rct.getReceiver(),this.rct.getRoomUri(), "MSG #" + i);
+				
+			}catch(Exception e) {
+				System.out.println("Error send: "+ e.getMessage()+ ". "
+						+ " \n\t{reciver: "+this.rct.getReceiver()+" "
+								+ " \n\troom: "+this.rct.getRoomUri()+"}");
 			}
+			logger.debug(this.rct.getReceiverName() + " SEND MESSAGE (" + i + "/" + messages+ ") at room: " + this.rct.getRoom());
 		}
 
 		try {
@@ -53,29 +56,33 @@ public class BasicClient extends ChatClient {
 		}
 	}
 
+	public String getMonitorId() {
+		return user+"-"+rct.getReceiverName()+"-"+rct.getRoom();
+	}
 	@Override
 	public void onMessageReceived(String userUri, String messageUri, String name, String message,String time) {
-		monitor.messageReceived(user);
+		monitor.messageReceived(getMonitorId());
 	}
 
 	@Override
 	public void onMessageRemoved(String userUri, String messageUri, String name, String message, String time) {
-		monitor.messageRemoved(user);
+		monitor.messageRemoved(getMonitorId());
 	}
 
 	@Override
 	public void onMessageSent(String userUri, String messageUri, String time) {
-		monitor.messageSent(user);
+		monitor.messageSent(getMonitorId());
 	}
 
 	@Override
 	public void onRemoverBrokenConnection(String userUri) {
-		monitor.brokenConnectionRemover(user);
+		monitor.brokenConnectionRemover(getMonitorId());
 	}
 
 	@Override
 	public void onReceiverBrokenConnection(String userUri) {
-		monitor.brokenConnectionReceiver(userUri);
-		
+		monitor.brokenConnectionReceiver(getMonitorId());		
 	}
+
 }
+*/

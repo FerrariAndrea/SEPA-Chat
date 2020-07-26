@@ -1,4 +1,4 @@
-package it.unibo.arces.wot.sepa.apps.chat;
+package it.unibo.arces.wot.sepa.apps.ichat;
 
 public interface IMessageHandler {
 	public void onMessageReceived(String userUri,String messageUri,String user,String message,String time);

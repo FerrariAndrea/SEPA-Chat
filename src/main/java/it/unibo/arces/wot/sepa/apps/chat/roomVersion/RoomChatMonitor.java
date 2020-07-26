@@ -1,4 +1,4 @@
-package it.unibo.arces.wot.sepa.apps.chat;
+package it.unibo.arces.wot.sepa.apps.chat.roomVersion;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -6,23 +6,30 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import it.unibo.arces.wot.sepa.apps.chat.UserMonitor;
+import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomComunicationType;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPASecurityException;
 
-public class ChatMonitor {
+public class RoomChatMonitor {
 	protected static final Logger logger = LogManager.getLogger();
 
 	
 
 	private HashMap<String, UserMonitor> messageMap = new HashMap<>();
 
-	public ChatMonitor(Set<String> users, int messages) throws SEPAProtocolException, SEPAPropertiesException,
+	public RoomChatMonitor(HashMap<String, RoomComunicationType > rooms, int messages, int user) throws SEPAProtocolException, SEPAPropertiesException,
 			SEPASecurityException, SEPABindingsException, InterruptedException {
 
-		for (String user : users)
-			messageMap.put(user, new UserMonitor(user, messages * (users.size() - 1)));
+		for (String id : rooms.keySet()) {
+			int mess = messages;
+			if(rooms.get(id).isFreeRoom()){
+				mess*=user;
+			}
+			messageMap.put(id, new UserMonitor(id,mess));
+		}
 		
 		new Thread() {
 			public void run() {			
@@ -44,6 +51,7 @@ public class ChatMonitor {
 			logger.info(mon);
 		}
 	}
+	
 	public synchronized void monitor() throws InterruptedException {
 		boolean allDone;
 		do {

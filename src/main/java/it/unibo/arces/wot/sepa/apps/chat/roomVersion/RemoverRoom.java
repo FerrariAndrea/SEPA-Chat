@@ -1,7 +1,7 @@
 package it.unibo.arces.wot.sepa.apps.chat.roomVersion;
 
 import it.unibo.arces.wot.sepa.apps.chat.ChatAggregator;
-import it.unibo.arces.wot.sepa.apps.chat.IMessageHandler;
+import it.unibo.arces.wot.sepa.apps.ichat.IMessageHandler;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;

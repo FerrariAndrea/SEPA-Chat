@@ -4,6 +4,7 @@ import static org.junit.Assert.assertFalse;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -15,7 +16,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import it.unibo.arces.wot.sepa.apps.chat.client.BasicClient;
-import it.unibo.arces.wot.sepa.apps.chat.roomVersion.RoomChatClient;
+import it.unibo.arces.wot.sepa.apps.chat.roomVersion.RoomChatMonitor;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.RoomManager;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomClient;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomComunicationType;
@@ -32,11 +33,10 @@ public class SEPAChatRoomTest {
 	private static int BASE = 0;
 	private static int MESSAGES = 10;
 	private static int FREE_ROOMS = 2; //room non private, di gruppo
-	private static ArrayList<RoomComunicationType> rooms;
 	private static Users users;
-	private static List<RoomChatClient> clients = new ArrayList<RoomChatClient>();
+	private static List<RoomClient> clients = new ArrayList<RoomClient>();
 	private static RoomManager rm;
-	private static ChatMonitor monitor;
+	private static RoomChatMonitor monitor;
 
 	private static JSAPProvider cfg;
 
@@ -54,33 +54,9 @@ public class SEPAChatRoomTest {
 		clear();
 		registerClients();	
 		users = new Users();
-		users.joinChat();
+
+
 		
-		//creazione logica di scambio messaggi con le room 
-		//(tramite RoomComonucationType che definisce 1 comunicazione appoggiata a una room)		
-		rooms = new ArrayList<RoomComunicationType>();	
-		//String prefixRoom = "http://wot.arces.unibo.it/chat/";
-		//una room per ogni coppia di utenti
-		String temp[] = new String[users.getUsers().size()];
-		int k = 0;
-		for (Iterator<String> it = users.getUsers().iterator(); it.hasNext(); ) {
-			temp[k] = it.next();
-			k++;
-		}
-	
-		for(int x=0;x<users.getUsers().size();x++) {
-			for(int y=0;y<users.getUsers().size();y++) {
-				if(x!=y) {
-					String shortName = "room_"+x+"_"+ "y";
-					rooms.add(new RoomComunicationType(shortName, temp[x],x+"."+y));
-				}				
-			}
-		}
-		//room di gruppo
-		for(int x =0;x< FREE_ROOMS;x++) {
-			rooms.add(new RoomComunicationType("FreeRoom"+ x));
-		}		
-		createRooms();	
 	}
 
 	@Test // (timeout = 5000)
@@ -90,52 +66,86 @@ public class SEPAChatRoomTest {
 		 * Ogni coppia di clienti ha una stanza in cui si scambiano dei messaggi 
 		 */
 	
+		users.joinChat();
 		
 		//da modificare anche il monitor, il numero di MESSAGES non è lo stesso per ogni room-utente, le freeroom ne hanno di più
-		Set<String> monitorUsers = new HashSet<String>();
+		HashMap<String, RoomComunicationType>  monitorUsers = new HashMap<String, RoomComunicationType> ();
 		
+		
+		//creazione logica di scambio messaggi con le room 
+		//(tramite RoomComonucationType che definisce 1 comunicazione appoggiata a una room)		
 	
+		//String prefixRoom = "http://wot.arces.unibo.it/chat/";
+		//una room per ogni coppia di utenti
 		String temp[] = new String[users.getUsers().size()];
 		int k = 0;
 		for (Iterator<String> it = users.getUsers().iterator(); it.hasNext(); ) {
 			temp[k] = it.next();
 			k++;
 		}
-	
-		int index = 0;
+		Set<String> tempKey = new HashSet<String>();
 		for(int x=0;x<users.getUsers().size();x++) {
 			for(int y=0;y<users.getUsers().size();y++) {
-				if(x!=y) {			
-					RoomClient rc1=new RoomClient(temp[x], rooms.get(index), MESSAGES,monitor);
-					clients.add(rc1);
-					monitorUsers.add(rc1.getMonitorId());
-					rm.enter(rooms.get(index).getRoom());//sorta di registrazione nella room (è solo un contatore)
+				if(x!=y && !tempKey.contains(x+"-"+y)) {
+					String shortName = "room_"+x+"_"+ y;
+					RoomComunicationType rct1=new RoomComunicationType(temp[x],shortName, temp[y],users.getUserName( temp[y]));
+					rct1.setRoomUri(rm.create(rct1));
+					RoomComunicationType rct2=new RoomComunicationType(temp[y],shortName, temp[x],users.getUserName( temp[x]));
+					rct2.setRoomUri(rm.create(rct2));
 					
-					RoomClient rc2=new RoomClient(temp[y], rooms.get(index), MESSAGES,monitor);
+					tempKey.add(x+"-"+y);
+					tempKey.add(y+"-"+x);
+					
+					RoomClient rc1=new RoomClient(rct1,users, MESSAGES);
+					clients.add(rc1);
+					monitorUsers.put(rc1.getMonitorId(),rct1);
+					rm.enter(rct1.getRoomUri());//sorta di registrazione nella room (è solo un contatore)
+					
+					RoomClient rc2=new RoomClient(rct2,users, MESSAGES);
 					clients.add(rc2);
-					monitorUsers.add(rc2.getMonitorId());
-					rm.enter(rooms.get(index).getRoom());//sorta di registrazione nella room (è solo un contatore)
-					index++;
+					monitorUsers.put(rc2.getMonitorId(),rct2);
+					rm.enter(rct2.getRoomUri());
 				}				
 			}
 		}
 		//room di gruppo
+		/*
 		for(int x =0;x< FREE_ROOMS;x++) {
-			for(int z=0;z<users.getUsers().size();z++) {
-					RoomClient rc=new RoomClient(temp[z], rooms.get(index), MESSAGES,monitor);
-					clients.add(rc);
-					monitorUsers.add(rc.getMonitorId());	
-					rm.enter(rooms.get(index).getRoom());//sorta di registrazione nella room (è solo un contatore)					
-			}
-			index++;		
-		}	
+				for(int z=0;z<users.getUsers().size();z++) {
+						RoomComunicationType freerct=new RoomComunicationType(temp[z],"roomFree_"+ x);
+						freerct.setRoomUri(rm.create(freerct));
+						RoomClient rc=new RoomClient(freerct,users, MESSAGES);
+						clients.add(rc);						
+						monitorUsers.put(rc.getMonitorId(),rct);
+						rm.enter(freerct.getRoomUri());//sorta di registrazione nella room (è solo un contatore)					
+				}	
+			
+		}		
+		*/
+		//for (RoomComunicationType r : rooms) {
+		//	System.out.println(r.getRoom());
+		//}
 		
-		monitor = new ChatMonitor(monitorUsers, MESSAGES);
+		
+		try {
+			rm.closeAll();
+		} catch (IOException e) {
+			assertFalse("createRooms", true);
+		}
 		
 		
+
+	
+		System.out.println("User count : "+users.getUsers().size());			
+		System.out.println("Room count : "+clients.size());		
+		
+		monitor = new RoomChatMonitor(monitorUsers, MESSAGES,users.getUsers().size());		
+		for (RoomClient c : clients) {
+			c.setMonitor(monitor);
+		}
 		
 		//start chatting
-		for (RoomChatClient client : clients) {
+		for (RoomClient client : clients) {
 			Thread th = new Thread(client);
 			th.start();
 		}
@@ -153,7 +163,7 @@ public class SEPAChatRoomTest {
 		} catch (IOException e) {
 			assertFalse("deleteAllClients", true);
 		}
-		//rm.deleteAllRoom(rooms);	 room null point	
+		rm.deleteAllRoom();	
 		System.out.println("End clear");
 	}
 
@@ -172,16 +182,5 @@ public class SEPAChatRoomTest {
 		}
 		System.out.println("End register bots");
 	}
-	private static void createRooms() throws SEPAProtocolException, SEPAPropertiesException, SEPASecurityException {
-		System.out.println("Create rooms...");
-		for (RoomComunicationType r : rooms) {
-			rm.create(r);
-		}
-		try {
-			rm.closeAll();
-		} catch (IOException e) {
-			assertFalse("createRooms", true);
-		}
-		System.out.println("End create rooms");
-	}
+	
 }

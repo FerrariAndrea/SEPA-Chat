@@ -38,7 +38,7 @@ public class RoomManager extends Producer  {
 	
 	public String create(RoomComunicationType roomRCT) {
 		logger.debug("Create room: "+roomRCT.getRoom());
-		String room = _roomPrefixName + roomRCT.getRoom() +"/";
+		String room = _roomPrefixName + roomRCT.getRoom()  ;
 		try {			
 			this.setUpdateBindingValue("room",new RDFTermURI(room));			
 			update();
@@ -50,30 +50,20 @@ public class RoomManager extends Producer  {
 		return room;
 	}
 	public void deleteAllRoom() {
-		_deleteRoom.clean(_roomList.values());
-	}
-	/*
-	public void deleteAllRoom(ArrayList<String> roomName) {
-		ArrayList <String> rs = new ArrayList <String> ();
-		for (String r : roomName) {
-			rs.add(_roomPrefixName + r +"/");
-		}
-		_deleteRoom.clean(rs);
-	}
-	*/
-	public void deleteAllRoom(ArrayList<RoomComunicationType> rooms) {
-		ArrayList <String> rs = new ArrayList <String> ();
-		for (RoomComunicationType r : rooms) {
-			rs.add(_roomPrefixName + r.getRoom() +"/");
-		}
-		_deleteRoom.clean(rs);
+		_deleteRoom.clean();
 	}
 	
 	public String getRoomByName(String roomName) {
 		return _roomList.get(roomName);
 	}
-	public void enter(String roomName) {
-		_enterRoomProducer.enter(new RDFTermURI(this.getRoomByName(roomName)));
+	public void enter(String roomUri) {
+		try {
+			//perche devo sempre creare un nuovo producer? (la close è automomatica)
+			new EnterRoom().enter(new RDFTermURI(roomUri));
+		} catch (SEPAProtocolException | SEPASecurityException | SEPAPropertiesException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void closeAll() throws IOException {
 		_enterRoomProducer.close();
@@ -92,6 +82,7 @@ class EnterRoom extends Producer  {
 	}
 	
 	public void enter(RDFTermURI room) {
+		//System.out.print("-->"+room);
 		logger.debug("Enter room: "+room);		
 		try {
 			this.setUpdateBindingValue("room",room);			
@@ -113,16 +104,12 @@ class DeleteAllRoom extends Producer {
 		super(new JSAPProvider().getJsap(), "DELETE_ROOM",new JSAPProvider().getSecurityManager());
 	}
 	
-	public void clean(Collection<String> collection) {
-		for (String room : collection) {
-			logger.info("Delete room " + room);
+	public void clean() {
 			try {
-				this.setUpdateBindingValue("room",  new RDFTermURI(room));
 				update();
 			} catch (SEPASecurityException | SEPAPropertiesException | SEPABindingsException | SEPAProtocolException e) {
 				logger.error(e.getMessage());
-			}
-		}
+			}		
 		
 	}
 }

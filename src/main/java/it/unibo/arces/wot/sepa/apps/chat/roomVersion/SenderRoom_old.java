@@ -1,8 +1,9 @@
-package it.unibo.arces.wot.sepa.apps.chat;
+package it.unibo.arces.wot.sepa.apps.chat.roomVersion;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import it.unibo.arces.wot.sepa.apps.chat.JSAPProvider;
 import it.unibo.arces.wot.sepa.apps.ichat.IMessageHandler;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
@@ -12,12 +13,12 @@ import it.unibo.arces.wot.sepa.commons.sparql.RDFTermLiteral;
 import it.unibo.arces.wot.sepa.commons.sparql.RDFTermURI;
 import it.unibo.arces.wot.sepa.pattern.Producer;
 
-public class Sender extends Producer {
+class SenderRoom_old extends Producer {
 	protected static final Logger logger = LogManager.getLogger();
 
 	private final String userUri;
 	
-	public Sender(String userUri,IMessageHandler handler)
+	public SenderRoom_old(String userUri,IMessageHandler handler)
 			throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException, SEPABindingsException {
 		super(new JSAPProvider().getJsap(), "SEND", new JSAPProvider().getSecurityManager());
 
@@ -26,7 +27,7 @@ public class Sender extends Producer {
 		this.userUri = userUri;
 	}
 
-	public boolean sendMessage(String receiverURI, String text) {
+	public boolean sendMessage(String receiverURI,String room, String text) {
 		logger.debug("SEND To: " + receiverURI + " Message: " + text);
 
 		int retry = 5;
@@ -36,7 +37,7 @@ public class Sender extends Producer {
 			try {
 				this.setUpdateBindingValue("receiver", new RDFTermURI(receiverURI));
 				this.setUpdateBindingValue("text", new RDFTermLiteral(text));
-
+				this.setUpdateBindingValue("room", new RDFTermURI(room));
 				ret = update().isUpdateResponse();
 			} catch (SEPASecurityException | SEPAProtocolException | SEPAPropertiesException
 					| SEPABindingsException e) {
@@ -46,7 +47,7 @@ public class Sender extends Producer {
 			retry--;
 		}
 		
-		if (!ret) logger.error("UPDATE FAILED sender: "+userUri+" receiver: "+receiverURI+" text: "+text);
+		if (!ret) logger.error("UPDATE FAILED sender: "+userUri+" receiver: "+receiverURI+" text: "+text + " room: "+room );
 
 		return ret;
 	}

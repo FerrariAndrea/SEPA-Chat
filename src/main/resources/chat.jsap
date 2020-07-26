@@ -231,13 +231,7 @@
 			"sparql": "WITH <http://wot.arces.unibo.it/chat/> DELETE {?s ?p ?o} WHERE {?s ?p ?o}"
 		},
 		"DELETE_ROOM": {
-			"sparql": "WITH ?room DELETE {?s ?p ?o} WHERE {?s ?p ?o}",
-			"forcedBindings": {
-				"room": {					
-					"type": "uri",
-					"value": "http://wot.arces.unibo.it/chat/room_default"
-				}
-			}
+			"sparql": "DELETE {GRAPH ?g {?s ?p ?o} } WHERE  { GRAPH ?g {?s ?p ?o} . FILTER(regex(str(?g), \"http://wot.arces.unibo.it/chat/room\" ))}"
 		}
 	},
 	"queries": {

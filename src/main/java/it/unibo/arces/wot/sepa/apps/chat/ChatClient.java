@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import it.unibo.arces.wot.sepa.apps.chat.IMessageHandler;
+import it.unibo.arces.wot.sepa.apps.ichat.IMessageHandler;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
@@ -30,7 +30,17 @@ public abstract class ChatClient implements Runnable,IMessageHandler {
 		sender = new Sender(userURI,this);
 		receiver = new Receiver(userURI,this);
 		remover = new Remover(userURI,this);
-		
+		init(userURI);
+	}
+	
+	public ChatClient(String userURI,Sender sender,Receiver receiver,Remover remover) {
+		this.sender = sender;
+		this.receiver =receiver;
+		this.remover = remover;
+		init(userURI);
+	}
+	
+	private void init(String userURI) {
 		do {
 			logger.info(userURI + " joining the chat...");
 			try {
@@ -49,7 +59,6 @@ public abstract class ChatClient implements Runnable,IMessageHandler {
 
 		logger.info(userURI + " chat joined!");
 	}
-	
 	public void joinChat() throws SEPASecurityException, IOException, SEPAPropertiesException, SEPAProtocolException, InterruptedException, SEPABindingsException {
 		remover.joinChat();
 		receiver.joinChat();

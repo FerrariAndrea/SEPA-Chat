@@ -12,26 +12,18 @@ import it.unibo.arces.wot.sepa.commons.sparql.Bindings;
 import it.unibo.arces.wot.sepa.commons.sparql.BindingsResults;
 import it.unibo.arces.wot.sepa.commons.sparql.RDFTermURI;
 
-class ReceiverRoom extends ChatAggregator {
-	protected final IMessageHandler handler;
-	protected String userUri;
-	protected String room;
-	public ReceiverRoom(String userUri,String room,IMessageHandler handler)
+class ReceiverRoom_old2 extends Receiver {
+	private String room;
+	
+	public ReceiverRoom_old2(String userUri,String room,IMessageHandler handler)
 			throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException, SEPABindingsException {
-		super("SENT", "SET_RECEIVED");
+		super(userUri, handler);
 
-		this.setSubscribeBindingValue("receiver", new RDFTermURI(userUri));
-		this.setSubscribeBindingValue("room", new RDFTermURI(room));	
-		this.room=room;
-		this.handler = handler;
-		this.userUri = userUri;
+		this.setSubscribeBindingValue("room", new RDFTermURI(room));		
+		this.room =room;
 	}
 	
-	@Override
-	public void onBrokenConnection(ErrorResponse err) {
-		logger.error(err);
-		handler.onReceiverBrokenConnection(userUri);
-	}
+	
 
 	@Override
 	public void onAddedResults(BindingsResults results) {
@@ -39,14 +31,23 @@ class ReceiverRoom extends ChatAggregator {
 		
 		logger.debug("onAddedResults");
 
-		for (Bindings bindings : results.getBindings()) {
+		for (Bindings bindings : results.getBindings()) {//FOR EACH SENT notify
 			logger.debug("SENT " + bindings.getValue("message"));
-			
-			handler.onMessageReceived(userUri, bindings.getValue("message"), bindings.getValue("name"), bindings.getValue("text"),bindings.getValue("time"));
-		
+			//System.out.println("--> "+  bindings.getValue("name"));
+			//System.out.println("--> "+  bindings.getValue("text"));
+			//System.out.println("--> "+ 	bindings.getValue("time") );
+			handler.onMessageReceived(
+					userUri, 
+					bindings.getValue("message"),
+					bindings.getValue("name"),
+					bindings.getValue("text"),
+					bindings.getValue("time")
+				);
+		//System.out.println("ok");
+			//SET_RECEIVED 
 			try {
-				this.setUpdateBindingValue("room",  new RDFTermURI(this.room));
 				this.setUpdateBindingValue("message", new RDFTermURI(bindings.getValue("message")));
+				this.setUpdateBindingValue("room",  new RDFTermURI(this.room));
 				update();
 				
 			} catch (SEPASecurityException | SEPAProtocolException | SEPAPropertiesException | SEPABindingsException e) {
@@ -55,16 +56,4 @@ class ReceiverRoom extends ChatAggregator {
 		}
 	}
 	
-	@Override
-	public void onRemovedResults(BindingsResults results) {
-		super.onRemovedResults(results);
-		
-		logger.debug("onRemovedResults");
-
-		for (Bindings bindings : results.getBindings()) {
-			logger.debug("REMOVED " + bindings.getValue("message"));
-			
-			handler.onMessageRemoved(userUri, bindings.getValue("message"), bindings.getValue("name"), bindings.getValue("text"),bindings.getValue("time"));
-		}
-	}
 }

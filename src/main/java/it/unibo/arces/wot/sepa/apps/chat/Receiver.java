@@ -1,5 +1,6 @@
 package it.unibo.arces.wot.sepa.apps.chat;
 
+import it.unibo.arces.wot.sepa.apps.ichat.IMessageHandler;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPABindingsException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
@@ -9,9 +10,9 @@ import it.unibo.arces.wot.sepa.commons.sparql.Bindings;
 import it.unibo.arces.wot.sepa.commons.sparql.BindingsResults;
 import it.unibo.arces.wot.sepa.commons.sparql.RDFTermURI;
 
-class Receiver extends ChatAggregator {
-	private final IMessageHandler handler;
-	private String userUri;
+public class Receiver extends ChatAggregator {
+	protected final IMessageHandler handler;
+	protected String userUri;
 	
 	public Receiver(String userUri,IMessageHandler handler)
 			throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException, SEPABindingsException {
