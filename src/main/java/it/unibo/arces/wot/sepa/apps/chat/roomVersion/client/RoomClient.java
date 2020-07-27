@@ -51,7 +51,7 @@ public class RoomClient extends RoomChatClient {
 		for (int i = 0; i < messages; i++) {
 			if(rct.isFreeRoom()) {
 				logger.debug(users.getUserName(user) +"@"+rct.getRoomUri()+ " SEND MESSAGE (" + n + "/" +messages+ messages  +")");
-				sendMessage("http://wot.arces.unibo.it/chat/ALL",rct.getRoomUri(), "MSG #" + n);
+				sendPublicMessage("http://wot.arces.unibo.it/chat/ALL",rct.getRoomUri(), "MSG #" + n);
 			}else {
 				logger.debug(users.getUserName(user) +"@"+rct.getRoomUri()+ " SEND MESSAGE (" + n + "/"  +messages+ messages +")");
 				sendMessage(rct.getReceiver(),rct.getRoomUri(), "MSG #" + n);

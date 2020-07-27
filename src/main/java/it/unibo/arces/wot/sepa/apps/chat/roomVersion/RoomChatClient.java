@@ -63,4 +63,7 @@ public abstract class RoomChatClient implements Runnable,IMessageHandler {
 	public boolean sendMessage(String receiverURI,String room,String message) {
 		return sender.sendMessage(receiverURI,room,message);
 	}
+	public boolean sendPublicMessage(String receiverURI,String room,String message) {
+		return sender.sendPublicMessage( receiverURI, room, message);
+	}
 }

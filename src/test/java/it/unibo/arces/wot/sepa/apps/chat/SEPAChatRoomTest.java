@@ -109,19 +109,19 @@ public class SEPAChatRoomTest {
 			}
 		}
 		//room di gruppo
-		/*
+		
 		for(int x =0;x< FREE_ROOMS;x++) {
 				for(int z=0;z<users.getUsers().size();z++) {
 						RoomComunicationType freerct=new RoomComunicationType(temp[z],"roomFree_"+ x);
 						freerct.setRoomUri(rm.create(freerct));
 						RoomClient rc=new RoomClient(freerct,users, MESSAGES);
 						clients.add(rc);						
-						monitorUsers.put(rc.getMonitorId(),rct);
+						monitorUsers.put(rc.getMonitorId(),freerct);
 						rm.enter(freerct.getRoomUri());//sorta di registrazione nella room (è solo un contatore)					
 				}	
 			
 		}		
-		*/
+		
 		//for (RoomComunicationType r : rooms) {
 		//	System.out.println(r.getRoom());
 		//}

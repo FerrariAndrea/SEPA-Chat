@@ -50,4 +50,30 @@ public class SenderRoom extends Sender {
 
 		return ret;
 	}
+	
+	public boolean sendPublicMessage(String receiverURI,String room, String text) {
+		logger.debug("SEND To: " + receiverURI + " Message: " + text);
+
+		int retry = 5;
+
+		boolean ret = false;
+		while (!ret && retry > 0) {
+			try {
+				this.setUpdateBindingValue("receiver", new RDFTermURI(receiverURI));
+				this.setUpdateBindingValue("text", new RDFTermLiteral(text));
+				this.setUpdateBindingValue("room", new RDFTermURI(room));
+				this.setUpdateBindingValue("private", new RDFTermLiteral("0"));
+				ret = update().isUpdateResponse();
+			} catch (SEPASecurityException | SEPAProtocolException | SEPAPropertiesException
+					| SEPABindingsException e) {
+				logger.error(e.getMessage());
+				ret = false;
+			}
+			retry--;
+		}
+		
+		if (!ret) logger.error("UPDATE FAILED sender: "+userUri+" receiver: "+receiverURI+" text: "+text + " room: "+room );
+
+		return ret;
+	}
 }
