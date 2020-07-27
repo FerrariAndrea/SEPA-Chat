@@ -5698,3 +5698,29 @@
 
 2020-07-26T10:27:31,207|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:123)|Exception on handling onSemanticEvent. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5245c41 Exception: null
 
+2020-07-27T10:39:55,206|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 46.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    "}
+
+2020-07-27T10:39:55,218|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 46.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    "}
+
+2020-07-27T10:39:55,220|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 46.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    "}
+
+2020-07-27T10:39:55,223|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 46.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    "}
+
+2020-07-27T10:39:55,226|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 46.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    "}
+
+2020-07-27T10:39:55,229|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 3, column 38.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T10:39:55,231|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 3, column 38.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T10:39:55,234|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 3, column 38.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T10:39:55,237|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 3, column 38.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T10:39:55,240|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 3, column 38.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T10:39:55,243|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"SPARQL11ProtocolException","status_code":400,"error_description":"Parsing failed: Encountered \" <VAR1> \"?room \"\" at line 2, column 70.\r\nWas expecting one of:\r\n    <IRIref> ...\r\n    <PNAME_NS> ...\r\n    <PNAME_LN> ...\r\n    \"named\" ...\r\n    "}
+
+2020-07-27T15:45:40,284|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-27T15:45:44,324|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+

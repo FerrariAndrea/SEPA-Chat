@@ -17,7 +17,7 @@ public class RoomChatMonitor {
 	protected static final Logger logger = LogManager.getLogger();
 
 	
-
+	private boolean printStatusAgain = true;
 	private HashMap<String, UserMonitor> messageMap = new HashMap<>();
 
 	public RoomChatMonitor(HashMap<String, RoomComunicationType > rooms, int messages, int user) throws SEPAProtocolException, SEPAPropertiesException,
@@ -30,10 +30,10 @@ public class RoomChatMonitor {
 			}
 			messageMap.put(id, new UserMonitor(id,mess));
 		}
-		
+		printStatusAgain = true;
 		new Thread() {
 			public void run() {			
-				while(true) {
+				while(printStatusAgain) {
 					printStatus();
 					try {
 						Thread.sleep(5000);
@@ -64,6 +64,7 @@ public class RoomChatMonitor {
 				}
 			}
 		} while(!allDone);
+		printStatusAgain=false;
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

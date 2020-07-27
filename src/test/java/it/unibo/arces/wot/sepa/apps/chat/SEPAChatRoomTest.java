@@ -44,11 +44,12 @@ public class SEPAChatRoomTest {
 	public static void init() throws SEPASecurityException, SEPAPropertiesException, SEPAProtocolException, IOException, InterruptedException, SEPABindingsException {
 		cfg = new JSAPProvider();
 
+	
 		BASE = cfg.getJsap().getExtendedData().get("base").getAsInt();
 		N_CLIENTS = cfg.getJsap().getExtendedData().get("clients").getAsInt();
 		MESSAGES = cfg.getJsap().getExtendedData().get("messages").getAsInt();
 		FREE_ROOMS = cfg.getJsap().getExtendedData().get("free_rooms").getAsInt();
-		
+	
 	
 		rm= new RoomManager();
 		clear();

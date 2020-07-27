@@ -36,7 +36,7 @@
 		"base": 0,
 		"clients": 5,
 		"messages": 5,
-		"free_rooms" : 2
+		"free_rooms" : 0
 	},
 	"graphs": {
 
