@@ -31,14 +31,5 @@ public class BenchmarkerRunner {
 		System.out.println("Benchmarker run-success: "+ b.runTest());
 	}
 	
-	public static void main (String[] args) throws RunnerException {
-		
-	    final Options options = new OptionsBuilder()
-                .include(BenchmarkerRunner.class.getSimpleName())
-                .forks(1)
-                .build();
-        new Runner(options).run();
-		
-	
-	}
+
 }
