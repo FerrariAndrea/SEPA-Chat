@@ -27,9 +27,7 @@ public class SEPAChatTest {
 
 	private static Users users;
 	private static List<ChatClient> clients = new ArrayList<ChatClient>();
-
 	private static ChatMonitor monitor;
-
 	private static JSAPProvider cfg;
 
 	@BeforeClass

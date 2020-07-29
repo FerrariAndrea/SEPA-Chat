@@ -29,7 +29,7 @@ import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPASecurityException;
 
-public class Benchmarker implements IBenchmarker{
+public class BenchmarkerSeparateGraph implements IBenchmarker{
 
 	private int privateRoomCount=0;
 	private int freeRoomCount;
@@ -50,7 +50,7 @@ public class Benchmarker implements IBenchmarker{
 	private static RoomChatMonitor monitor;
 	//private static JSAPProvider cfg;
 	
-	public Benchmarker( int freeRoomCount, int clientCount,int messaggeCount) {
+	public BenchmarkerSeparateGraph( int freeRoomCount, int clientCount,int messaggeCount) {
 		super();
 		this.freeRoomCount = freeRoomCount;
 		this.messaggeCount = messaggeCount;		
@@ -148,11 +148,6 @@ public class Benchmarker implements IBenchmarker{
 		}
 	}
 
-	@Override
-	public BenchResult getResult() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	
 	//----------------------------------------------------------------------

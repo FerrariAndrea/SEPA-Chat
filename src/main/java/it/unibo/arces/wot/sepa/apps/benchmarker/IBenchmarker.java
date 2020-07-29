@@ -9,6 +9,5 @@ public interface IBenchmarker {
 	
 	boolean runTest();
 	
-	BenchResult getResult();
-	
+
 }

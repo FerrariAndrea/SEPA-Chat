@@ -5,8 +5,8 @@
 
 	<groupId>it.unibo.arces.wot</groupId>
 	<artifactId>sepa.apps.chat</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<version>0.0.2</version>
+	<packaging>jar</packaging>
 
 	<name>sepa.apps.chat</name>
 	<url>http://maven.apache.org</url>

@@ -5724,3 +5724,645 @@
 
 2020-07-27T15:45:44,324|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
 
+2020-07-29T11:17:33,244|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:37,287|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:41,300|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:45,305|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:49,313|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:53,323|[ERROR]|main|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information"}
+
+2020-07-29T11:17:55,438|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:02,448|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:09,457|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:16,463|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:23,472|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:30,481|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:37,486|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:44,494|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:51,503|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:18:58,509|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:05,516|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:12,523|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:19,528|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:26,535|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:33,544|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:40,552|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:47,559|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:19:54,568|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:01,573|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:08,579|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:15,584|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:22,592|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:29,600|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:36,604|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:20:43,610|[ERROR]|main|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:24:09,311|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:13,318|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:17,330|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:21,335|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:25,339|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:29,346|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:24:31,481|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:24:38,487|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:24:45,492|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:24:52,498|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:24:59,504|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:06,511|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:13,518|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:20,523|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:27,529|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:34,535|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:41,543|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:48,546|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:25:55,550|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:02,555|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:09,560|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:16,564|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:23,567|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:30,572|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:37,579|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:44,585|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:51,592|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:26:58,596|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:05,602|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:12,606|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:19,612|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:26,616|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:33,620|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:40,625|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:47,631|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:27:54,637|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:01,642|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:08,646|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:15,652|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:22,660|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:29,665|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:36,673|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:43,680|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:50,686|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:28:57,690|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:04,695|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:11,700|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:18,707|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:25,713|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:32,720|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:39,727|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:46,734|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:29:53,742|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:00,748|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:07,755|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:14,759|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:21,765|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:28,772|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:35,777|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:42,784|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:49,789|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:30:56,794|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:03,801|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:10,806|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:17,813|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:24,818|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:31,823|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:38,830|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:45,835|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:52,840|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:31:59,845|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:06,849|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:13,854|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:20,864|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:27,872|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:31,356|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:32:34,880|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:35,372|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:32:39,390|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T11:32:41,889|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T11:32:43,404|[ERROR]|it.unibo.arces.wot.sepa.apps.benchmarker.BenchmarkerRunner.test-jmh-worker-1|(SPARQL11Protocol.java:213)|{"error":"IOException","status_code":500,"error_description":"Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect"}
+
+2020-07-29T12:43:28,480|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,481|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@63891707 Exception: null
+
+2020-07-29T12:43:28,482|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,482|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@3c7f0368 Exception: null
+
+2020-07-29T12:43:28,480|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,483|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,483|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@61bb03b7 Exception: null
+
+2020-07-29T12:43:28,483|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,484|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,484|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,484|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,485|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,487|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,484|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,487|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,488|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@f1505f6 Exception: null
+
+2020-07-29T12:43:28,488|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,487|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,488|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5b0ddaaf Exception: null
+
+2020-07-29T12:43:28,488|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@67c34481 Exception: null
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@6cf8d9bc Exception: null
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,485|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@6b11c64b Exception: null
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2d2a76f2 Exception: null
+
+2020-07-29T12:43:28,487|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@18b6ecd0 Exception: null
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,491|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@63eebfce Exception: null
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@fa9d45 Exception: null
+
+2020-07-29T12:43:28,491|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,489|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,491|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4d5c3ecc Exception: null
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,493|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@506084b Exception: null
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,493|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,493|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,493|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@7ee17ba3 Exception: null
+
+2020-07-29T12:43:28,490|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@41af1b61 Exception: null
+
+2020-07-29T12:43:28,491|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,494|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,495|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,506|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@323e9212 Exception: null
+
+2020-07-29T12:43:28,508|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,509|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@154d7711 Exception: null
+
+2020-07-29T12:43:28,509|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,481|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,510|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@3c482cd2 Exception: null
+
+2020-07-29T12:43:28,509|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,492|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,512|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,486|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,513|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,513|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@323091ef Exception: null
+
+2020-07-29T12:43:28,513|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5bf049a Exception: null
+
+2020-07-29T12:43:28,481|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,511|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@d99044 Exception: null
+
+2020-07-29T12:43:28,511|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@70243337 Exception: null
+
+2020-07-29T12:43:28,509|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4fbfb17e Exception: null
+
+2020-07-29T12:43:28,513|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,514|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,514|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@16227fc4 Exception: null
+
+2020-07-29T12:43:28,516|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,517|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,517|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@6b5fe697 Exception: null
+
+2020-07-29T12:43:28,520|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,520|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,520|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,520|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,520|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,521|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@7b16a233 Exception: null
+
+2020-07-29T12:43:28,521|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@b959d9e Exception: null
+
+2020-07-29T12:43:28,522|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@7ecd8d05 Exception: null
+
+2020-07-29T12:43:28,522|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,522|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,523|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,523|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,524|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5dbac687 Exception: null
+
+2020-07-29T12:43:28,525|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@3e463384 Exception: null
+
+2020-07-29T12:43:28,526|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,527|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4c0809f4 Exception: null
+
+2020-07-29T12:43:28,527|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,527|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2800787d Exception: null
+
+2020-07-29T12:43:28,530|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,531|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,532|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@52f74a4a Exception: null
+
+2020-07-29T12:43:28,531|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,531|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,533|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,533|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@10d11475 Exception: null
+
+2020-07-29T12:43:28,533|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,535|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,536|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,537|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,537|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,538|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,539|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,539|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,536|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4dd89793 Exception: null
+
+2020-07-29T12:43:28,540|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@60a504b0 Exception: null
+
+2020-07-29T12:43:28,541|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,541|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@17d2820a Exception: null
+
+2020-07-29T12:43:28,541|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,541|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,543|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,543|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4fe03259 Exception: null
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4a780895 Exception: null
+
+2020-07-29T12:43:28,510|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,510|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5c0a15ca Exception: null
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,523|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4cfeec Exception: null
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,522|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,547|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,548|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@12b03ebe Exception: null
+
+2020-07-29T12:43:28,547|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@23a6821 Exception: null
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@1fcc4bf0 Exception: null
+
+2020-07-29T12:43:28,547|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@19b60bbc Exception: null
+
+2020-07-29T12:43:28,562|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2c4d0f02 Exception: null
+
+2020-07-29T12:43:28,562|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,564|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,564|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2de55b4e Exception: null
+
+2020-07-29T12:43:28,564|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,565|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@374792af Exception: null
+
+2020-07-29T12:43:28,509|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,508|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,508|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,565|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@50c9f4c4 Exception: null
+
+2020-07-29T12:43:28,565|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,507|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,483|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@20f8aab2 Exception: null
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,544|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@8ba7846 Exception: null
+
+2020-07-29T12:43:28,541|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@7845c65b Exception: null
+
+2020-07-29T12:43:28,542|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,568|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,568|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,568|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2d39df71 Exception: null
+
+2020-07-29T12:43:28,569|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,569|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,525|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,571|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2f164e80 Exception: null
+
+2020-07-29T12:43:28,567|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2dddb20b Exception: null
+
+2020-07-29T12:43:28,570|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,566|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,574|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4fbfb17e Exception: null
+
+2020-07-29T12:43:28,574|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,564|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,562|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,574|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@31ca6e4b Exception: null
+
+2020-07-29T12:43:28,562|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,574|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,561|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,575|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,574|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,575|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,546|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@60bcee7a Exception: null
+
+2020-07-29T12:43:28,575|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@7e313fea Exception: null
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@3994ab48 Exception: null
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,575|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@676ce2ab Exception: null
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,575|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@5e092045 Exception: null
+
+2020-07-29T12:43:28,545|[ERROR]|Grizzly(2)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,570|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@708caf95 Exception: null
+
+2020-07-29T12:43:28,573|[ERROR]|Grizzly(1)|(ReceiverRoom.java:32)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(2)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(1)|(RemoverRoom.java:51)|{"error":"CLOSED_ABNORMALLY","status_code":1006,"error_description":"Closed abnormally."}
+
+2020-07-29T12:43:28,579|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@4b2e0c35 Exception: null
+
+2020-07-29T12:43:28,579|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@2b9ea4ce Exception: null
+
+2020-07-29T12:43:28,578|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@55e61751 Exception: null
+
+2020-07-29T12:43:28,579|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:159)|Exception on handling onBrokenConnection. Handler: it.unibo.arces.wot.sepa.api.protocols.websocket.WebsocketSubscriptionProtocol@343ffe76 Exception: null
+
+2020-07-29T12:43:30,497|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T12:43:30,513|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T12:43:30,555|[ERROR]|Grizzly(1)|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T12:43:30,589|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:192)|Connection failed.
+
+2020-07-29T12:43:30,592|[ERROR]|Grizzly(2)|(WebsocketClientEndpoint.java:192)|Connection failed.
+

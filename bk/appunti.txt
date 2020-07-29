@@ -1,0 +1,111 @@
+-------------------------------------------------------
+---
+---------------chat.jsap
+---
+-------------------------------------------------------
+
+File conf originale, permette comunicazioni 1-1 tra clienti, tutti i clienti fanno parte dello stesso grafo
+
+-------------------------------------------------------
+---
+---------------chat_room_v1.jsap  (test not pass)
+---
+-------------------------------------------------------
+*)modifiche importanti:
+    1)REGISTER_USER
+        modificato per avere un grafo per ogni utente (room)
+        si può confinare un utente o più in una stanza
+    2)DELETE_ROOM
+        aggiunta per poter eliminare una stanza
+
+*)invariate:
+    STORE_SENT
+    STORE_RECEIVED    
+    (si potrebbe aggiungere una tripla che segni la room coinvolta, in queste sopra)
+    USERS
+    RECEIVED_MONITOR
+    (forse vanno modificate anche queste sopra)
+    LOG_SENT
+    LOG_RECEIVED
+    QUERY_ALL
+*)modifiche di conseguenza alla importanti
+    aggunta la force bind per la stanza (?room) su tutte le rimanenti
+
+-------------------------------------------------------
+---
+---------------chat_room_v2.jsap (test pass)
+---
+-------------------------------------------------------
+
+vari fix e conclusione confinamento messaggi in room
+
+
+---------------------------
+##----------------SEND ORIGINALE
+
+WITH <http://wot.arces.unibo.it/chat/> INSERT {
+		?message rdf:type schema:Message; 
+		schema:text ?text;
+		schema:sender ?sender;
+		schema:toRecipient ?receiver;
+		schema:dateSent ?time
+	} WHERE {
+		BIND(IRI(CONCAT(\"http://wot.arces.unibo.it/chat/message_\",STRUUID())) AS ?message) .
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person .
+		BIND(STR(now()) AS ?time)
+	}
+
+#---------------------SEND CON ROOM (semplificata)
+WITH <http://wot.arces.unibo.it/chat/room45/> INSERT {
+<http://wot.arces.unibo.it/chat/room45/message/prova> rdf:type schema:Message ;
+ schema:text ?text ;
+ schema:sender ?sender ;
+ schema:toRecipient ?receiver;
+ schema:dateSent ?time
+} WHERE    {
+ BIND(STR(now()) AS ?time) .
+	GRAPH <http://wot.arces.unibo.it/chat> {
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person 
+	}
+}
+
+#---------------------SEND CON ROOM (jsap con force-bind)
+WITH ?room INSERT {
+ ?message rdf:type schema:Message ;
+ schema:text ?text ;
+ schema:sender ?sender ;
+ schema:toRecipient ?receiver;
+ schema:dateSent ?time
+} WHERE    {
+ BIND(IRI(CONCAT(CONCAT(?room ,\"/message_\"),STRUUID())) AS ?message) .
+ BIND(STR(now()) AS ?time) .
+	GRAPH <http://wot.arces.unibo.it/chat> {
+		?sender rdf:type schema:Person .
+		?receiver rdf:type schema:Person 
+	}
+}
+
+
+-------------------------------------------------------
+---
+---------------chat_room_v3.jsap (test pass)
+---
+-------------------------------------------------------
+il receiver non è più obbligatorio, se omesso il messaggi oè "di gruppo" tutti devono leggerlo nella stanza
+(sto cercando di tenere retrocompatibilità con il codice originale)
+COsa fare con la received in caso di receiver omesso?
+il primo che riceve esegue la set_received, tutti incrementano un contatore "schema:InteractionCounter count".
+La remove non è ottimizzata, viene lanciata sempre per mantenere la retrocompatibilità con la chat originale,
+ma è utile solo quando il count delle SET_RECEIVED è pare ai partecipanti della room
+(tranne il caso a default in cui esiste uan sola room e i messaggi sono 1-1)
+
+-------------------------------------------------------
+---
+---------------chat_room_v4.jsap (test pass)
+---
+-------------------------------------------------------
+qualche fix sparql ed aggiunto il contatore nel numero di clienti in una roomin modo da capire quando eliminare un messaggio,
+il messaggio viene eliminato solo dopo la lettura numero N dove N sono gli utenti che si sono "segnato" come partecipanti alla room
+(manca però la gestione del caso in cui un messaggio abbia un destinatario, dunque deve essere eliminato dopo la prima lettura)
