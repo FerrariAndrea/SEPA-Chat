@@ -24,6 +24,7 @@ import it.unibo.arces.wot.sepa.apps.chat.Users;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.RoomChatMonitor;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.RoomManager;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomClient;
+import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomClientWrapper;
 import it.unibo.arces.wot.sepa.apps.chat.roomVersion.client.RoomComunicationType;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAPropertiesException;
 import it.unibo.arces.wot.sepa.commons.exceptions.SEPAProtocolException;
@@ -45,7 +46,8 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 	 */
 	
 	private static Users users;
-	private static List<RoomClient> clients = new ArrayList<RoomClient>();
+	private static List<RoomClient> roomClients = new ArrayList<RoomClient>();
+	private static HashMap<String,RoomClientWrapper> cleints =new  HashMap<String,RoomClientWrapper>();
 	private static RoomManager rm;
 	private static RoomChatMonitor monitor;
 	//private static JSAPProvider cfg;
@@ -55,6 +57,8 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 		this.freeRoomCount = freeRoomCount;
 		this.messaggeCount = messaggeCount;		
 		this.clientCount =clientCount;
+
+		System.out.println("BenchmarkerSeparateGraph[client->"+clientCount+"; msg->"+messaggeCount+"; free->"+freeRoomCount+"]");
 		
 	}
 
@@ -90,18 +94,18 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 						tempKey.add(y+"-"+x);
 						
 						RoomClient rc1=new RoomClient(rct1,users, messaggeCount);
-						clients.add(rc1);
+						roomClients.add(rc1);
 						monitorUsers.put(rc1.getMonitorId(),rct1);
 						rm.enter(rct1.getRoomUri());//sorta di registrazione nella room (è solo un contatore)
 						
 						RoomClient rc2=new RoomClient(rct2,users, messaggeCount);
-						clients.add(rc2);
+						roomClients.add(rc2);
 						monitorUsers.put(rc2.getMonitorId(),rct2);
 						rm.enter(rct2.getRoomUri());						
 					}				
 				}
 			}
-			privateRoomCount=clients.size();
+			privateRoomCount=roomClients.size();
 			//room di gruppo
 			
 			for(int x =0;x< freeRoomCount;x++) {
@@ -109,7 +113,7 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 							RoomComunicationType freerct=new RoomComunicationType(temp[z],"roomFree_"+ x);
 							freerct.setRoomUri(rm.create(freerct));
 							RoomClient rc=new RoomClient(freerct,users, messaggeCount);
-							clients.add(rc);						
+							roomClients.add(rc);						
 							monitorUsers.put(rc.getMonitorId(),freerct);
 							rm.enter(freerct.getRoomUri());//sorta di registrazione nella room (è solo un contatore)					
 					}	
@@ -118,9 +122,22 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 			rm.closeAll();
 			
 			monitor = new RoomChatMonitor(monitorUsers, messaggeCount, users.getUsers().size());		
-			for (RoomClient c : clients) {
+			for (RoomClient c : roomClients) {
 				c.setMonitor(monitor);
 			}
+			//per la nuova versione conl stesso numero di thread su entrambi i test
+			for (RoomClient rc : roomClients) {
+				if(cleints.containsKey(rc.getUser())) {
+					RoomClientWrapper temprcw =cleints.get(rc.getUser());
+					temprcw.add(rc);
+					cleints.put(rc.getUser(),temprcw);
+				}else {
+					cleints.put(rc.getUser(),new RoomClientWrapper(rc));
+				}
+			}
+			
+
+			System.out.println("N-thread: "+ cleints.size());
 			return true;
 		}catch (Exception e) {
 			System.out.println("Init-Error: "+ e.getMessage());
@@ -133,15 +150,30 @@ public class BenchmarkerSeparateGraph implements IBenchmarker{
 
 	@Override	
 	public boolean runTest() {
+		//old version (numero thread diverso tra i 2 test)
+		/*
 		try {
-				//start chatting
-				for (RoomClient client : clients) {
-					Thread th = new Thread(client);
-					th.start();
-				}
-				
-				monitor.monitor();
-				return true;
+			//start chatting
+			for (RoomClient client : roomClients) {
+				Thread th = new Thread(client);
+				th.start();
+			}
+			
+			monitor.monitor();
+			return true;
+		}catch (Exception e) {
+			System.out.println("Run-Error: "+ e.getMessage());
+			return false;
+		}
+		*/
+		try {
+			//start chatting
+			for (RoomClientWrapper client : cleints.values()) {
+				Thread th = new Thread(client);
+				th.start();
+			}			
+			monitor.monitor();
+			return true;
 		}catch (Exception e) {
 			System.out.println("Run-Error: "+ e.getMessage());
 			return false;

@@ -31,6 +31,7 @@ public class BenchmarkerSingleGraph implements IBenchmarker{
 		super();
 		this.messaggeCount = messaggeCount;		
 		this.clientCount =clientCount;		
+		System.out.println("BenchmarkerSingleGraph[client->"+clientCount+"; msg->"+messaggeCount+"]");
 	}
 
 	
@@ -46,7 +47,7 @@ public class BenchmarkerSingleGraph implements IBenchmarker{
 				ChatClient client = new BasicClient(user, users, messaggeCount,monitor);
 				clients.add(client);
 			}
-			
+			System.out.println("N-thread: "+ clients.size());
 			return true;
 		}catch (Exception e) {
 			System.out.println("Init-Error: "+ e.getMessage());

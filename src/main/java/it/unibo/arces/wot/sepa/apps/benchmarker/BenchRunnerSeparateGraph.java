@@ -8,6 +8,7 @@ import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
+import org.openjdk.jmh.annotations.Timeout;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -20,13 +21,14 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @State(Scope.Thread)
 @BenchmarkMode(Mode.SingleShotTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS) 
+@Timeout(time = 1, timeUnit = TimeUnit.HOURS)
 public class BenchRunnerSeparateGraph {
 	
 	private BenchmarkerSeparateGraph b1;
 	
 	@Setup
 	public void init1() {
-		b1= new BenchmarkerSeparateGraph(0,4,5);
+		b1= new BenchmarkerSeparateGraph(0,5,5);
 		System.out.println("Benchmarker separateGraph init-success: "+ b1.init());
 	}
 

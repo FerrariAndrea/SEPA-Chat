@@ -26,6 +26,7 @@ public class RoomClient extends RoomChatClient {
 	protected String user;
 	protected Users users;
 	protected int messages = 10;
+	private int actualMessage=0;
 	protected RoomChatMonitor monitor;
 	private RoomComunicationType rct;
 	public RoomClient(RoomComunicationType rct, Users users,int messages)
@@ -45,9 +46,14 @@ public class RoomClient extends RoomChatClient {
 
 	@Override
 	public void run() {
-
-		int n = 0;
-		
+		System.out.println("RoomClient.run is deprecated, it do nothing, use RoomClientWrapper and sendNextMessage instead.");
+		//deprecato, per eguagliare il numero ti thread dei due test (separate e single graph)
+		//in questo test (separate graph) invece di usare un thread per ogni room
+		//(che quindi di numero molto maggiore rispetto ai thread dell'altro test, signle graph)
+		//usiamo un thread (esterno a questa classe) per cliente, che invocherà il metodo "sendNextMessage"
+		//di questa classe, la classe esterna in qeustione si chiama "RoomClientWrapper"
+		/*
+		int n = 0;		
 		for (int i = 0; i < messages; i++) {
 			if(rct.isFreeRoom()) {
 				logger.debug(users.getUserName(user) +"@"+rct.getRoomUri()+ " SEND MESSAGE (" + n + "/" +messages+ messages  +")");
@@ -65,8 +71,24 @@ public class RoomClient extends RoomChatClient {
 			}
 		} catch (InterruptedException e) {
 		}
+		*/
 	}
 
+	public boolean sendNextMessage() {
+		if(actualMessage>=messages) {
+			return false;
+		}
+		if(rct.isFreeRoom()) {
+			logger.debug(users.getUserName(user) +"@"+rct.getRoomUri()+ " SEND MESSAGE (" + actualMessage+ "/" +messages+ messages  +")");
+			sendPublicMessage("http://wot.arces.unibo.it/chat/ALL",rct.getRoomUri(), "MSG #" + actualMessage);
+		}else {
+			logger.debug(users.getUserName(user) +"@"+rct.getRoomUri()+ " SEND MESSAGE (" + actualMessage + "/"  +messages+ messages +")");
+			sendMessage(rct.getReceiver(),rct.getRoomUri(), "MSG #" + actualMessage);
+		}
+		actualMessage++;
+		return true;
+	}
+	
 	@Override
 	public void onMessageReceived(String userUri, String messageUri, String name, String message,String time) {
 		if(this.monitor!=null) {
@@ -105,4 +127,10 @@ public class RoomClient extends RoomChatClient {
 	public String getMonitorId() {
 		return user+"-"+rct.getReceiverName()+"-"+rct.getRoom();
 	}
+
+	public String getUser() {
+		return user;
+	}
+	
+	
 }
