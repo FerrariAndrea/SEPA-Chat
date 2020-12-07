@@ -25,7 +25,7 @@ public class BenchRunnerSignleGraph {
 
 	@Setup
 	public void init2() {
-		b2= new BenchmarkerSingleGraph(20,5);
+		b2= new BenchmarkerSingleGraph(3,5);
 		System.out.println("Benchmarker singleGraph init-success: "+ b2.init());
 	}
 	

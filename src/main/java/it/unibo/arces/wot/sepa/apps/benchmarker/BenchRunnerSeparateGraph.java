@@ -28,8 +28,9 @@ public class BenchRunnerSeparateGraph {
 	
 	@Setup
 	public void init1() {
-		b1= new BenchmarkerSeparateGraph(0,5,5);
+		b1= new BenchmarkerSeparateGraph(0,15,40);
 		System.out.println("Benchmarker separateGraph init-success: "+ b1.init());
+		
 	}
 
 

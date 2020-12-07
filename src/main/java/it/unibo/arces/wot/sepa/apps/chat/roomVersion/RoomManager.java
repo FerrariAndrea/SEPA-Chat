@@ -28,11 +28,11 @@ public class RoomManager extends Producer  {
 	private DeleteAllRoom _deleteRoom = new DeleteAllRoom();
 	
 	public RoomManager(String roomPrefixName)throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException {
-		super(new JSAPProvider().getJsap(), "CREATE_ROOM", new JSAPProvider().getSecurityManager());
+		super(new JSAPProvider().getJsap(), "CREATE_ROOM");
 		this._roomPrefixName= roomPrefixName;
 	}
 	public RoomManager()throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException{
-		super(new JSAPProvider().getJsap(), "CREATE_ROOM", new JSAPProvider().getSecurityManager());
+		super(new JSAPProvider().getJsap(), "CREATE_ROOM");
 		this._roomPrefixName= "http://wot.arces.unibo.it/chat/";
 	}
 	
@@ -78,7 +78,7 @@ class EnterRoom extends Producer  {
 
 	
 	public EnterRoom()throws SEPAProtocolException, SEPASecurityException, SEPAPropertiesException {
-		super(new JSAPProvider().getJsap(), "ENTER_ROOM", new JSAPProvider().getSecurityManager());
+		super(new JSAPProvider().getJsap(), "ENTER_ROOM");
 	}
 	
 	public void enter(RDFTermURI room) {
@@ -101,7 +101,7 @@ class DeleteAllRoom extends Producer {
 	private static final Logger logger = LogManager.getLogger();
 	
 	public DeleteAllRoom() throws SEPAProtocolException, SEPAPropertiesException, SEPASecurityException {
-		super(new JSAPProvider().getJsap(), "DELETE_ROOM",new JSAPProvider().getSecurityManager());
+		super(new JSAPProvider().getJsap(), "DELETE_ROOM");
 	}
 	
 	public void clean() {

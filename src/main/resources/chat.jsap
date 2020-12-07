@@ -57,7 +57,7 @@
 						schema:dateSent ?time ;
 						chat:private ?private.
 					} WHERE    {
-						BIND(IRI(CONCAT(CONCAT(?room ,\"/message_\"),STRUUID())) AS ?message) .
+						BIND(IRI(CONCAT(CONCAT(?roomstr ,\"/message_\"),STRUUID())) AS ?message) .
 						BIND(STR(now()) AS ?time) .
 						GRAPH <http://wot.arces.unibo.it/chat/> {
 							?sender rdf:type schema:Person .
@@ -80,6 +80,10 @@
 				},	
 				"room": {					
 					"type": "uri",
+					"value": "http://wot.arces.unibo.it/chat/room_default"
+				},
+				"roomstr": {					
+					"type": "literal",
 					"value": "http://wot.arces.unibo.it/chat/room_default"
 				},
 				"private": {
